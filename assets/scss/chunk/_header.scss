@@ -4,21 +4,52 @@
 	&__wrap {
 		display: flex;
 		align-items: center;
+
+		@media screen and (max-width: 576px) {
+			justify-content: space-between;
+		}
+	}
+
+	&__inner {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+
+		@media screen and (max-width: 576px) {
+			width: 100%;
+			max-width: 350px;
+		}
+
+		@media screen and (max-width: 500px) {
+			max-width: 300px;
+		}
+
+		@media screen and (max-width: 400px) {
+			max-width: 250px;
+		}
+
+		@media screen and (max-width: 375px) {
+			max-width: 185px;
+		}
 	}
 
 	&__logo {
 		margin-right: 35px;
 		cursor: default;
-	}
 
-	&__logo-img {
-		width: 130px;
-		height: 22px;
+		&-icon {
+			width: 130px;
+			height: 22px;
+		}
 	}
 
 	&__telephone {
 		display: flex;
 		align-items: center;
+
+		@media screen and (max-width: 576px) {
+			display: none;
+		}
 	}
 
 	&__text {
@@ -32,6 +63,40 @@
 
 		&:hover {
 			color: var(--california);
+		}
+	}
+
+	&__city {
+		display: none;
+
+		@media screen and (max-width: 576px) {
+			display: flex;
+			font-size: 14px;
+			color: var(--cornflower-blue);
+			transition: color 0.4s;
+
+			&:hover {
+				color: var(--tuna);
+			}
+		}
+	}
+
+	&__cabinet {
+		display: none;
+
+		@media screen and (max-width: 576px) {
+			display: flex;
+
+			&-icon {
+				width: 20px;
+				height: 20px;
+				stroke: var(--dark);
+				transition: stroke 0.4s;
+
+				&:hover {
+					stroke: var(--california);
+				}
+			}
 		}
 	}
 }
