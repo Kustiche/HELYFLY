@@ -1,0 +1,51 @@
+.rating {
+	display: flex;
+	align-items: center;
+
+	&__icon {
+		@include adaptive-font(18, 14);
+		margin-right: 10px;
+		width: 32px;
+		height: 36px;
+		line-height: 146%;
+
+		@media screen and (min-width: 1400px) {
+			font-size: 18px;
+		}
+	}
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		margin-right: 15px;
+	}
+
+	&__text {
+		@include adaptive-font(18, 14);
+		margin: 0;
+
+		&--fatter {
+			margin: 0 5px;
+			font-weight: 600;
+		}
+
+		@media screen and (min-width: 1400px) {
+			font-size: 18px;
+		}
+	}
+}
+
+.stars {
+	display: flex;
+	align-items: center;
+
+	&__icon {
+		margin-right: 7px;
+		width: 18px;
+		height: 17px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
