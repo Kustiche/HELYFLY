@@ -1,0 +1,106 @@
+.hero {
+	padding: 285px 0 260px;
+	background-image: url('@img/hero/background.jpg');
+	background-position: right;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	&__wrap {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	&__title {
+		@include adaptive-font(40, 32);
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		margin-bottom: 30px;
+		max-width: 885px;
+		color: var(--white);
+	}
+
+	&__text {
+		margin: 0;
+	}
+
+	&__text--color-orange {
+		margin: 0 15px;
+		color: var(--california);
+	}
+
+	&__price {
+		position: relative;
+		display: flex;
+		align-items: center;
+		margin-bottom: 20px;
+		border-radius: 5px;
+		padding: 10px 30px 15px 25px;
+		width: 100%;
+		max-width: 225px;
+		background-color: var(--california);
+
+		&::after {
+			content: '';
+			position: absolute;
+			left: 57%;
+			bottom: -22%;
+			border: 10px solid transparent;
+			border-top: 10px solid var(--california);
+		}
+	}
+
+	&__price-inner {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		margin-right: 15px;
+	}
+
+	&__price-text {
+		@include adaptive-font(20, 18);
+		margin: 0;
+		color: var(--white);
+	}
+
+	&__price-number {
+		@include adaptive-font(35, 30);
+		margin: 0;
+		font-weight: 800;
+		color: var(--white);
+	}
+
+	&__price-percent {
+		@include adaptive-font(35, 30);
+		position: relative;
+		font-weight: 800;
+		color: var(--white);
+
+		&::after {
+			content: '';
+			position: absolute;
+			left: -30%;
+			top: -12%;
+			border: 1px solid var(--white);
+			border-radius: 50%;
+			width: 52px;
+			height: 52px;
+		}
+	}
+
+	&__link {
+		@include adaptive-font(18, 16);
+		border: 3px solid var(--white);
+		border-radius: 3px;
+		padding: 25px 35px;
+		font-weight: 900;
+		color: var(--white);
+		transition: all 0.4s;
+
+		&:hover {
+			color: var(--california);
+			background-color: var(--white);
+		}
+	}
+}
